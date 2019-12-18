@@ -17,11 +17,10 @@ module.exports = {
         getPlayersList()
             .then(results => {
                 let orderPlayers = results.data.players.sort(function(playerOne, playerTwo) {
-                    return playerOne.id > playerTwo.id
+                    return playerOne.id - playerTwo.id
                 });
 
-                console.log(orderPlayers);
-                return callback(null, results.data)
+                return callback(null, orderPlayers)
             })
             .catch(err => {
                 return callback(err, null)

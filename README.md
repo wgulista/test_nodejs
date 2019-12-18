@@ -12,3 +12,6 @@ player is matching.
 3 / As the players data changes from time to time, change your code so that the players are fetched
 from the following end point for every API call:
     - https://alivebyacadomia.github.io/headtohead.json
+
+# Use
+- yarn install

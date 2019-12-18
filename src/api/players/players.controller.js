@@ -22,7 +22,7 @@ module.exports = {
         getPlayerById(id, (err, results) => {
             if (err) {
                 console.error(err);
-                return res.status(500).json({
+                return res.status(404).json({
                     success: 0,
                     message: "Error"
                 });
