@@ -1,5 +1,4 @@
 const axios = require('axios');
-const _ = require('underscore');
 
 const url = `https://alivebyacadomia.github.io/headtohead.json`;
 
@@ -17,7 +16,11 @@ module.exports = {
     getPlayers: function(callback) {
         getPlayersList()
             .then(results => {
-                let orderPlayers = results.data
+                let orderPlayers = results.data.players.sort(function(playerOne, playerTwo) {
+                    return playerOne.id > playerTwo.id
+                });
+
+                console.log(orderPlayers);
                 return callback(null, results.data)
             })
             .catch(err => {
