@@ -7,7 +7,7 @@ module.exports = {
                 console.error(err);
                 return res.status(500).json({
                     success: 0,
-                    message: "Error"
+                    message: err
                 });
             }
             return res.status(200).json({
@@ -24,7 +24,7 @@ module.exports = {
                 console.error(err);
                 return res.status(404).json({
                     success: 0,
-                    message: "Error"
+                    message: err
                 });
             }
             return res.status(200).json({

@@ -33,7 +33,8 @@ module.exports = {
                 playerById = results.data.players.filter(player => {
                     return player.id == idPlayer ? player : '';
                 })
-                
+                if (playerById.length === 0)
+                    return callback("No player is matching", null); 
                 return callback(null, playerById)
             })
             .catch(err => {
