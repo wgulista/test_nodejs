@@ -15,3 +15,5 @@ from the following end point for every API call:
 
 # Use
 - yarn install
+- yarn start
+- go to http://localhost:5000/players/
