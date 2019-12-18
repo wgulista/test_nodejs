@@ -8,7 +8,7 @@ const port = process.env.APP_PORT || 5000;
 const playersRouter = require("./api/players/players.router");
 
 /* ROUTER */
-app.use("/api/players", playersRouter);
+app.use("/players", playersRouter);
 
 const listener = app.listen(port, () => {
   console.log("Server Up and Running on port " + port)
