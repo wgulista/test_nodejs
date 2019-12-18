@@ -32,10 +32,5 @@
   },
   "engines": {
     "node": ">=8"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test"
-    }
   }
 }
